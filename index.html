@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <title>Page Clicker</title>
+        <link rel="icon" href="icon.png">
+    </head>
+    <body>
+        <h2 id="money">You have: $10</h2>
+        <div id="upgrades">
+            <div id="upgradesHeader" onclick="hideUpgrades()">
+                Upgrades
+            </div>
+            <div id = "CU" class="newUpgradeOdd" onclick="buyUpgrade(0)">
+                Unlock CSS generators: $100
+            </div>
+            <div id = "JU" class="newUpgrade" onclick="buyUpgrade(1)">
+                Unlock JS generators: $1e4
+            </div>
+            <div id = "PU" class="newUpgradeOdd" onclick="buyUpgrade(2)">
+                Unlock PHP generators: $1e6
+            </div>
+            <div id = "SU" class="newUpgrade" onclick="buyUpgrade(3)">
+                Unlock SQL generators: $1e8
+            </div>
+            <div id = "NU" class="newUpgradeOdd" onclick="buyUpgrade(4)">
+                Unlock Node.JS generators: $1e10
+            </div>
+        </div>
+        <table id="navigation">
+            <tr>
+                <th class="menu" id="side" onclick="changeSide()">In Client Side</th>
+                <th class="menu" id="save" onclick="saveGame(false)">Save Game</th>
+                <th class="menu" onclick="showUpgrades()">Upgrades</th>
+            </tr>
+            <tr><td id="jump"></td></tr>
+            <tr>
+                <th id="HA"></th>
+                <th id="CA"></th>
+                <th id="JA"></th>
+            </tr>
+            <tr>
+                <td id="00" onclick="buyGen(0, 0)"></td>
+                <td id="10" onclick="buyGen(1, 0)"></td>
+                <td id="20" onclick="buyGen(2, 0)"></td>
+            </tr>
+            <tr>
+                <td id="01" onclick="buyGen(0, 1)"></td>
+                <td id="11" onclick="buyGen(1, 1)"></td>
+                <td id="21" onclick="buyGen(2, 1)"></td>
+            </tr>
+            <tr>
+                <td id="02" onclick="buyGen(0, 2)"></td>
+                <td id="12" onclick="buyGen(1, 2)"></td>
+                <td id="22" onclick="buyGen(2, 2)"></td>
+            </tr>
+            <tr>
+                <td id="03" onclick="buyGen(0, 3)"></td>
+                <td id="13" onclick="buyGen(1, 3)"></td>
+                <td id="23" onclick="buyGen(2, 3)"></td>
+            </tr>
+        </table> <br>
+        <div class="bottom" id="launch" onclick="launchPage()">
+            Launch page for: $0
+        </div>
+        <div class="bottom" id="prestige" onclick="prestige()">
+            Prestige for: 0PP
+        </div> <br><br>
+        <div id="delete" onclick="deleteSave()">
+            Delete save
+        </div>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
